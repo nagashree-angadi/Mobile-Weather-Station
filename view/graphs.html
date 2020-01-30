@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+		<title>Mobile Weather Station</title>
+		<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+		<link href="/Final/fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="/Final/style/style.css">
+	</head>
+	<body>
+		<div class="site-content">
+			<div class="site-header">
+				<div class="container">
+					<a href="/Final/index.html" class="branding">
+						<img src="/Final/images/logo.png" alt="" class="logo">
+						<div class="logo-type">
+							<h1 class="site-title">Mobile Weather Station</h1>
+						</div>
+					</a>
+					<div class="main-navigation">
+						<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+						<ul class="menu">
+							<li class="menu-item"><a href="/Final/index.html">Home</a></li>
+							<li class="menu-item"><a href="/Final/view/maps.html">Maps</a></li>
+							<li class="menu-item current-menu-item"><a href="/Final/view/graphs.html">Data</a></li>
+							<li class="menu-item"><a href="/Final/view/timeSeries.html">Time Series</a></li>
+						</ul> 
+					</div>
+					<div class="mobile-navigation"></div>
+				</div>
+			</div>
+			<main class="main-content">
+				<div class="container">
+					<div class="breadcrumb">
+						<a href="index.html">Home</a>
+						<span>Data</span>
+					</div>
+				</div>
+				<div class="container">
+						<iframe src="http://thingspeak.com/channels/254116/charts/1?api_key=Q3CI13I658N913PP">
+						</iframe>
+						<iframe src="http://thingspeak.com/channels/254116/charts/2?api_key=Q3CI13I658N913PP">
+						</iframe>
+				</div>
+				<div class="container">
+					<iframe src="http://thingspeak.com/channels/254116/charts/3?api_key=Q3CI13I658N913PP">
+					</iframe>
+					<iframe src="http://thingspeak.com/channels/254116/charts/4?api_key=Q3CI13I658N913PP">
+					</iframe>
+				</div>
+			</main>
+	</body>
+</html>

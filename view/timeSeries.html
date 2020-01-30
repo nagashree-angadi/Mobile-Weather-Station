@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+		<title>Mobile Weather Station</title>
+		<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+		<link href="/Final/fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="/Final/style/style.css">
+		<script type="text/javascript">
+			function loadImage(){
+				block = document.getElementById("block");
+				block.innerHTML = "";
+				parameter = document.getElementById("selectParameter").value;
+
+				if(parameter === "pm"){
+						img = document.createElement("img");
+						img.src = "/Final/images/pm4.png";
+						block.appendChild(img);
+					
+				}
+				else{
+					//alert("co");
+					
+						img = document.createElement("img");
+						img.src = "/Final/images/co4.png";
+						block.appendChild(img);
+					
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="site-content">
+			<div class="site-header">
+				<div class="container">
+					<a href="/Final/index.html" class="branding">
+						<img src="/Final/images/logo.png" alt="" class="logo">
+						<div class="logo-type">
+							<h1 class="site-title">Mobile Weather Station</h1>
+						</div>
+					</a>
+					<div class="main-navigation">
+						<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+						<ul class="menu">
+							<li class="menu-item"><a href="/Final/index.html">Home</a></li>
+							<li class="menu-item"><a href="/Final/view/maps.html">Maps</a></li>
+							<li class="menu-item"><a href="/Final/view/graphs.html">Data</a></li>
+							<li class="menu-item current-menu-item"><a href="/Final/view/timeSeries.html">Time Series</a></li>
+						</ul> 
+					</div>
+					<div class="mobile-navigation"></div>
+				</div>
+			</div>
+			<main class="main-content">
+				<div class="container">
+					<div class="breadcrumb">
+						<a href="index.html">Home</a>
+						<span>Time Series</span>
+					</div>
+				</div>
+				<div class="container weather-parameter">
+					<div class="row" >
+							<div class="col-md-10" >
+								<select id="selectParameter">
+									<option value="co">CO</option>
+									<option value="pm">PM 2.5</option>
+								</select>
+							</div>
+							<div class="col-md-2">
+									<button onclick="loadImage()">Submit</button>
+							</div>
+					</div>
+				</div>
+				<div class="container" id="block">
+				</div>
+			</main>
+	</body>
+</html>
